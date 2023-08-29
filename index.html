@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link href="font/DTGetaiGroteskDisplay-Black.ttf">
-    <title>Document</title>
+    <script src="js/plus-knop-function.js"></script>
+    <link rel="icon" href="images/Screenshot 2023-08-29 at 12.07.12.png" type="image/x-icon"/>
+    <title>CheckList</title>
 </head>
 <body>
     <div id="full_body">
@@ -14,7 +16,7 @@
         
 
         <Div id="motherDiv">
-            <div id="addbutton">+</div>
+            <div id="addbutton" onclick="add()">+</div>
             <div id="completedbutton">
             <p id="spin">^</p>
             <p id="comtext">Completed</p>
@@ -22,11 +24,12 @@
         </Div>
 
         <div id="createmenu">
-            <form>
-                <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title"><br>
-                <label for="Description">Description:</label><br>
-                <input type="text" id="Description" name="Description">
+            <form action="">
+                <label class="formu" for="title">Title:</label><br>
+                <input class="formu" type="text" id="title" name="title"><br>
+                <label class="formu" for="Description">Description:</label><br>
+                <input class="formu" type="text" id="Description" name="Description">
+                <input id="Done"type="submit" value="Done" onclick="close()">
             </form>
             
         </div>
