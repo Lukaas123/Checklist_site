@@ -1,0 +1,67 @@
+@import url('https://fonts.cdnfonts.com/css/dt-getai-grotesk-display');
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(to bottom right, #d3f5cf, #A8DBFA, #635EE2);
+}
+#full_body{
+    
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/asfalt-dark.png);
+}
+#header{
+    font-size: 2rem;
+   text-align: center; 
+   font-family: 'DT Getai Grotesk Display', sans-serif;
+}
+#addbutton{
+    position: absolute;
+    top: -6px ;
+    right: 9px;
+    float: right;
+    font-size: 3rem;
+
+}
+#motherDiv{
+    width: auto;
+    height: 87vh;
+    background-color: #d4fafe;
+    border-radius: 30px;
+    margin-top: 21px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overflow-y: scroll;
+}
+
+#completedbutton{
+    border-top: 2px black solid ;
+    height: 4vh;
+    position: absolute;
+    margin-top: 82vh;
+    width: 80vw;
+    padding-top: 5px;
+    background-color: #635EE2;
+    border-radius: 0 0 30px 30px;
+}
+#spin{
+    position: absolute;
+    margin-left: 11px;
+    color: aliceblue;
+}
+#comtext{
+    margin-left: 25px;
+    color: aliceblue;
+}
+#createmenu{
+    background-color: #d4fafe;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top:0;
+    margin-top: 30vh;
+    border-top: #635EE2 3px solid;
+    border-bottom: #635EE2 3px solid;
+}
