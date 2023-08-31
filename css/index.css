@@ -37,6 +37,57 @@ body{
     overflow-y: scroll;
 }
 
+#NewItem{
+    background-color: rgb(196, 196, 196);
+    width: 90%;
+    margin: 4%;
+    height: 60px;
+    border-radius: 20px;
+    padding: 1%;
+        display: grid; 
+        grid-template-columns: 0.8fr 0.1fr 2.6fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "checkbutton . totel"
+          "checkbutton . descrption"
+          ". . ."; 
+}
+
+#checkbutton{
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 100%;
+    border: 3px rgb(0, 98, 179) solid;
+    grid-area: checkbutton;
+    
+    
+}
+
+#checkbutton:hover{
+    background-color: rgb(0, 98, 179);
+}
+
+#text-wrapper{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#totel{
+    
+}
+
+#descrption{
+    color: rgb(101, 101, 101);
+    grid-area: descrption;
+    
+}
+
 #completedbutton{
     border-top: 2px black solid ;
     height: 4vh;
