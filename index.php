@@ -11,6 +11,9 @@
     <title>CheckList</title>
 </head>
 <body>
+    <?php 
+    include_once "php/data.php"
+    ?>
     <div id="full_body">
         <p id="header">checklist</p>
         
@@ -22,17 +25,33 @@
             <p id="comtext">Completed</p>
             </div>
 
+            <?php 
+            $sql = "SELECT * FROM checklist-info";
+            $result = $con->query($sql);
+
+            if($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+            ?>
             <div id="NewItem">
                 <div id=checkbutton onclick="check()"></div>
                 <div id="text-wrapper">
-                    <p id="totel">placeholder</p>
+                    <p id="totel"><?php echo $row["Title"]; ?></p>
                     <p id="descrption">placeholder</p>
                 </div>
             </div>
+            <?php 
+            }
+        } else {?>
+        <h>Sorry niks gevonden</h>
+        <?php
+        }
+        ?>
+
+
         </Div>
 
         <div id="createmenu">
-            <form action="">
+            <form name="createform"method="post" action="php/data.php">
                 <label class="formu" for="title">Title:</label><br>
                 <input class="formu" type="text" id="title" name="title"><br>
                 <label class="formu" for="Description">Description:</label><br>
