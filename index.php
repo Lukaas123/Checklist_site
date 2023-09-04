@@ -25,32 +25,31 @@
             <p id="comtext">Completed</p>
             </div>
 
-            <?php 
-            $sql = "SELECT * FROM checklist-info";
-            $result = $con->query($sql);
-
-            if($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-            ?>
-            <div id="NewItem">
+            <?php
+$sql = "SELECT * FROM checklist-info";
+$result = $con->query($sql);
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) { ?>
+    <?php echo $row["Titel"]; ?>
+        <div id="NewItem">
                 <div id=checkbutton onclick="check()"></div>
                 <div id="text-wrapper">
-                    <p id="totel"><?php echo $row["Title"]; ?></p>
+                    <p id="totel"><?php echo $row["ID"]; ?></p>
                     <p id="descrption">placeholder</p>
                 </div>
             </div>
-            <?php 
-            }
-        } else {?>
-        <h>Sorry niks gevonden</h>
         <?php
-        }
-        ?>
+}
+        } else { ?>
+    <h>Geen projecten gevonden</h>
+        <?php
+    }
+?>
 
 
         </Div>
 
-        <div id="createmenu">
+        <!--<div id="createmenu">
             <form name="createform"method="post" action="php/data.php">
                 <label class="formu" for="title">Title:</label><br>
                 <input class="formu" type="text" id="title" name="title"><br>
@@ -59,7 +58,7 @@
                 <input id="Done"type="submit" value="Done" onclick="close()">
             </form>
             
-        </div>
+        </div> -->
 
 
     </div>
