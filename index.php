@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php 
-    include_once "php/data.php"
+    include_once "php/data.php";
     ?>
     <div id="full_body">
         <p id="header">checklist</p>
@@ -26,16 +26,16 @@
             </div>
 
             <?php
-$sql = "SELECT * FROM checklist-info";
-$result = $con->query($sql);
+$sql = "SELECT * FROM kaaslist";
+$result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) { ?>
-    <?php echo $row["Titel"]; ?>
+    
         <div id="NewItem">
                 <div id=checkbutton onclick="check()"></div>
                 <div id="text-wrapper">
-                    <p id="totel"><?php echo $row["ID"]; ?></p>
-                    <p id="descrption">placeholder</p>
+                    <p id="totel"><?php echo $row["titel"]; ?></p>
+                    <p id="descrption"><?php echo $row["beschrijving"]; ?></p>
                 </div>
             </div>
         <?php
@@ -49,8 +49,8 @@ if ($result->num_rows > 0) {
 
         </Div>
 
-        <!--<div id="createmenu">
-            <form name="createform"method="post" action="php/data.php">
+        <div id="createmenu">
+            <form name="createform"method="post" action="php/form.php">
                 <label class="formu" for="title">Title:</label><br>
                 <input class="formu" type="text" id="title" name="title"><br>
                 <label class="formu" for="Description">Description:</label><br>
@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
                 <input id="Done"type="submit" value="Done" onclick="close()">
             </form>
             
-        </div> -->
+        </div>
 
 
     </div>

@@ -1,30 +1,12 @@
 <?php
-$con = new mysqli("localhost","088876","wachtwoord=goed","checklist");
+$host = 'localhost'; // De hostnaam van de database-server
+$db_name = 'checklist'; // De naam van de database
+$username = '088876'; // De gebruikersnaam voor de database
+$password = 'wachtwoord=goed'; // Het wachtwoord voor de database
 
-if (! $con) {
-    die("geen connectie" . mysqli_error($con) );
-} else {
-    echo "jeeeej";
+$conn = new mysqli($host, $username, $password, $db_name);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-
-<?php
-$sql = "SELECT * FROM checklist-info";
-$result = $con->query($sql);
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) { ?>
-    <?php echo $row["Titel"]; ?>
-
-/*$titel = $_POST['title'];
-$description = $_POST['Description'];
-
-$sql = "INSERT INTO `checklist-info` (`ID`, `Titel`, `Beschrijving`, `Done`) VALUES ('0', '$titel', '$description', 'false')";
-
-
-$rs = mysqli_query($con, $sql);
-
-
-
-
-
-*/
 ?>
