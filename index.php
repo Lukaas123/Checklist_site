@@ -13,6 +13,7 @@
 <body>
     <?php 
     include_once "php/data.php";
+    include_once "php/form.php";
     ?>
     <div id="full_body">
         <p id="header">checklist</p>
@@ -50,12 +51,12 @@ if ($result->num_rows > 0) {
         </Div>
 
         <div id="createmenu">
-            <form name="createform"method="post" action="php/form.php">
+            <form name="createform"method="post">
                 <label class="formu" for="title">Title:</label><br>
                 <input class="formu" type="text" id="title" name="title"><br>
                 <label class="formu" for="Description">Description:</label><br>
                 <input class="formu" type="text" id="Description" name="Description">
-                <input id="Done"type="submit" value="Done" onclick="close()">
+                <input id="Done"type="submit" value="Done" name="submit" onclick="close()">
             </form>
             
         </div>
