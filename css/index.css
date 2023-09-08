@@ -37,7 +37,7 @@ body{
     overflow-y: scroll;
 }
 
-#NewItem{
+.NewItem{
     background-color: rgb(196, 196, 196);
     width: 90%;
     margin: 4%;
@@ -78,9 +78,6 @@ body{
     align-items: center;
 }
 
-#totel{
-    
-}
 
 #descrption{
     color: rgb(101, 101, 101);
@@ -144,4 +141,14 @@ body{
     
     transform: scale(1.05);
     background: linear-gradient(#635EE2, #8885db);
+}
+#id{
+    display: none;
+}
+
+#completedscreen{
+    background: linear-gradient(#7a77d3, #635EE2);
+    width: 100%;
+    height: 100%;
+    display: none;
 }

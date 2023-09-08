@@ -21,7 +21,7 @@
 
         <Div id="motherDiv">
             <div id="addbutton" onclick="add()">+</div>
-            <div id="completedbutton" onclick="">
+            <div id="completedbutton" onclick="complete()">
             <p id="spin">^</p>
             <p id="comtext">Completed</p>
             </div>
@@ -32,9 +32,10 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) { ?>
     
-        <div id="NewItem">
-                <div id=checkbutton onclick="check()"></div>
+        <div class="NewItem" id="item<?php echo $row["id"]; ?>">
+                <div id=checkbutton onclick='check(<?php echo $row["id"]; ?>)'></div>
                 <div id="text-wrapper">
+                <p id="id"><?php echo $row["id"]; ?></p>
                     <p id="totel"><?php echo $row["titel"]; ?></p>
                     <p id="descrption"><?php echo $row["beschrijving"]; ?></p>
                 </div>
@@ -46,8 +47,10 @@ if ($result->num_rows > 0) {
         <?php
     }
 ?>
-
-
+    <div id="completedscreen">
+                test
+            </div>
+    
         </Div>
 
         <div id="createmenu">
@@ -63,5 +66,6 @@ if ($result->num_rows > 0) {
 
 
     </div>
+
 </body>
-</html>
+</html>        
